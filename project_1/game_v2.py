@@ -14,18 +14,20 @@ def game_core_v3(number: int = 1) -> int:
     """
     count = 0
     predict = np.random.randint(1, 101)
-    d1 = 1
-    d2 = 100
+    
+    # Диапазон поиска загаданного числа number
+    range_1 = 1
+    range_2 = 100
 
     while number != predict:
         count += 1
        
         if number > predict:
-            d1 = predict           
-            predict = np.random.randint(d1, d2+1)                     
+            range_1 = predict           
+            predict = np.random.randint(range_1, range_2+1)                     
         elif number < predict:
-            d2 = predict
-            predict = np.random.randint(d1, d2+1)            
+            range_2 = predict
+            predict = np.random.randint(range_1, range_2+1)            
             
     return count
 
