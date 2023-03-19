@@ -17,14 +17,12 @@ def game_core_v3(number: int = 1) -> int:
     d1 = 1
     d2 = 100
 
-
     while number != predict:
         count += 1
        
         if number > predict:
             d1 = predict           
-            predict = np.random.randint(d1, d2+1)  
-                     
+            predict = np.random.randint(d1, d2+1)                     
         elif number < predict:
             d2 = predict
             predict = np.random.randint(d1, d2+1)            
